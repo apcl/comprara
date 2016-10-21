@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="mfa">
+<head>
+	<meta charset="utf-8">
+	<title>Comprara</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="js/controller.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/3.5.1/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyAqnuUdDfQ9jHdtZNPJc_uwbkEUDCqkQAM",
+	    authDomain: "comprara-284a3.firebaseapp.com",
+	    databaseURL: "https://comprara-284a3.firebaseio.com",
+	    storageBucket: "comprara-284a3.appspot.com",
+	    messagingSenderId: "1056513774224"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
+</head>
+<body ng-controller="fcontroller">
+	<ul>
+		<li ng-repeat="post in posts">
+			<h2>{{post.nombre}}</h2>
+			<p>{{post.email}}</p>
+		</li>
+	</ul>
+</body>
+</html>
