@@ -7,11 +7,9 @@
 	<script src="js/controller.js"></script>
 </head>
 <body ng-controller="fcontroller">
-	<ul>
-		<li ng-repeat="post in posts">
-			<h2>{{post.nombre}}</h2>
-			<p>{{post.email}}</p>
-		</li>
-	</ul>
+	<div ng-repeat="post in posts">
+		<h2>{{post.marca + " " + post.modelo}}</h2>
+		<p>{{"$" + post.precio}}</p>
+	</div>
 </body>
 </html>
